@@ -6,6 +6,7 @@ import JoinPlatForm from "@/components/join-platform/join-platform";
 import NavBar from "@/components/nav-bar/nav-bar";
 import SellingPoint from "@/components/selling-point/selling-point";
 import Testimonial from "@/components/testimonials/testimonial";
+import { NAV_BAR_ITEMS } from "@/constants";
 
 export default function Home() {
   return (
@@ -138,35 +139,7 @@ export default function Home() {
       <SellingPoint />
       <Testimonial />
       <JoinPlatForm />
-      <Footer
-        links={[
-          {
-            id: "1",
-            path: "/home",
-            name: "Home",
-          },
-          {
-            id: "2",
-            path: "/about",
-            name: "About",
-          },
-          {
-            id: "3",
-            path: "/contact",
-            name: "Contact",
-          },
-          {
-            id: "4",
-            path: "/blog",
-            name: "Blog",
-          },
-          {
-            id: "5",
-            path: "/portfolio",
-            name: "Portfolio",
-          },
-        ]}
-      />
+      <Footer links={NAV_BAR_ITEMS} />
     </div>
   );
 }
