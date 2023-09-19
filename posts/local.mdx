@@ -3,10 +3,10 @@ title: Installation
 type: Post
 description: Create a new Next.js application with `create-next-app`. Set up TypeScript, styles, and configure your `next.config.js` file.
 author: Ebou Jobe
-date: "2023/07/03"
+date: '2023/07/03'
 ---
 
-<Video id="6ud1gFNW6V4?si=s2Lwsf1aORC05ANR" videoHost="youtube" />
+<Video id='6ud1gFNW6V4?si=s2Lwsf1aORC05ANR' videoHost='youtube' />
 
 System Requirements:
 
@@ -80,11 +80,11 @@ For new applications, we recommend using the [App Router](/docs/app). This route
 Create an `app/` folder, then add a `layout.tsx` and `page.tsx` file. These will be rendered when the user visits the root of your application (`/`).
 
 <Image
-  alt="App Folder Structure"
-  srcLight="/docs/light/app-getting-started.png"
-  srcDark="/docs/dark/app-getting-started.png"
-  width="1600"
-  height="363"
+  alt='App Folder Structure'
+  srcLight='/docs/light/app-getting-started.png'
+  srcDark='/docs/dark/app-getting-started.png'
+  width='1600'
+  height='363'
 />
 
 Create a [root layout](/docs/app/building-your-application/routing/pages-and-layouts#root-layout-required) inside `app/layout.tsx` with the required `<html>` and `<body>` tags:
@@ -96,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>{children}</body>
     </html>
   );
@@ -106,7 +106,7 @@ export default function RootLayout({
 ```jsx filename="app/layout.js" switcher
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body>{children}</body>
     </html>
   );
@@ -129,7 +129,7 @@ export default function Page() {
 
 > **Good to know**: If you forget to create `layout.tsx`, Next.js will automatically create this file when running the development server with `next dev`.
 
-Learn more about---- [using the App Router](/docs/app/building-your-application/routing/defining-routes).
+Learn more about [using the App Router](/docs/app/building-your-application/routing/defining-routes).
 
 #### The `pages` directory (optional)
 
@@ -146,7 +146,7 @@ export default function Page() {
 Next, add an `_app.tsx` file inside `pages/` to define the global layout. Learn more about the [custom App file](/docs/pages/building-your-application/routing/custom-app)).
 
 ```tsx filename="pages/_app.tsx" switcher
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
@@ -162,7 +162,7 @@ export default function App({ Component, pageProps }) {
 Finally, add a `_document.tsx` file inside `pages/` to control the initial response from the server. Learn more about the [custom Document file](/docs/pages/building-your-application/routing/custom-document).
 
 ```tsx filename="pages/_document.tsx" switcher
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (

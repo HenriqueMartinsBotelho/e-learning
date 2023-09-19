@@ -1,15 +1,15 @@
 // @ts-ignore
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import TestimonialCard from "./testimonial-card";
-import "@splidejs/react-splide/css";
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import TestimonialCard from './testimonial-card';
+import '@splidejs/react-splide/css';
 
 const Swiper = () => {
   return (
     <>
       <Splide
-        aria-label="My Favorite Images"
+        aria-label='My Favorite Images'
         options={{
-          type: "loop",
+          type: 'loop',
           autoplay: true,
         }}
       >
@@ -17,8 +17,8 @@ const Swiper = () => {
           <SplideSlide
             key={key}
             style={{
-              display: "flex",
-              justifyContent: "center",
+              display: 'flex',
+              justifyContent: 'center',
             }}
           >
             <TestimonialCard key={key} />

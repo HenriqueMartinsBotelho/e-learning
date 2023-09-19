@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Star, StarHalf } from "lucide-react";
+import { Star, StarHalf } from 'lucide-react';
 
 interface RatingProps {
   rating: number;
@@ -17,15 +17,15 @@ const Rating: React.FC<RatingProps> = ({
   const hasHalf = rating - wholeNumber >= 0.5;
 
   return (
-    <div className="flex">
+    <div className='flex'>
       {[...Array(5)].map((_, index) => {
         if (index < wholeNumber) {
           return (
             <Star
               key={index}
-              fill="#ff0"
+              fill='#ff0'
               className={`cursor-${
-                isReadOnly ? "default" : "pointer"
+                isReadOnly ? 'default' : 'pointer'
               } text-yellow-500`}
               onClick={() => !isReadOnly && onRate && onRate(index + 1)}
             />
@@ -35,9 +35,9 @@ const Rating: React.FC<RatingProps> = ({
           return (
             <StarHalf
               key={index}
-              fill="#ff0"
+              fill='#ff0'
               className={`cursor-${
-                isReadOnly ? "default" : "pointer"
+                isReadOnly ? 'default' : 'pointer'
               } text-yellow-500`}
               onClick={() => !isReadOnly && onRate && onRate(index + 1)}
             />
@@ -46,9 +46,9 @@ const Rating: React.FC<RatingProps> = ({
         return (
           <Star
             key={index}
-            fill="none"
+            fill='none'
             className={`cursor-${
-              isReadOnly ? "default" : "pointer"
+              isReadOnly ? 'default' : 'pointer'
             } text-gray-300`}
             onClick={() => !isReadOnly && onRate && onRate(index + 1)}
           />
