@@ -4,7 +4,7 @@ import { makeSource } from "contentlayer/source-remote-files";
 import { spawn } from "node:child_process";
 
 const BLOG_DIRECTORY = "blogs";
-const SYNC_INTERVAL = 1000 * 60 * 45; // 45 minutes
+const SYNC_INTERVAL = 1000 * 60;
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
@@ -85,7 +85,7 @@ const syncContentFromGit = async ({ contentDir, gitTag }) => {
 
     if (wasCancelled) return;
 
-    syncInterval = setTimeout(syncLoop, SYNC_INTERVAL);
+    syncInterval = setTimeout(syncLoop, SYNC_INTERVAL); // sync every minute
   };
 
   // Block until the first sync is done

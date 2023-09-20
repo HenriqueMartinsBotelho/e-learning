@@ -1,5 +1,5 @@
-import { faker } from "@faker-js/faker";
-import { SubSection, Section, Course, Video } from "@/types";
+import { faker } from '@faker-js/faker';
+import { SubSection, Section, Course, Video } from '@/types';
 
 const generateVideo = (course_id: string, section_id?: string): Video => ({
   video_id: faker.string.uuid(),
@@ -37,12 +37,12 @@ const generateCourse = (): Course => {
     instructor_id: faker.string.uuid(),
     demo_video: generateVideo(course_id),
     category: faker.helpers.arrayElement([
-      "Design",
-      "Next JS",
-      "FastApi",
-      "Express JS",
-      "Prisma",
-      "Spring boot",
+      'Design',
+      'Next JS',
+      'FastApi',
+      'Express JS',
+      'Prisma',
+      'Spring boot',
     ]),
     sections: Array.from(
       { length: faker.number.int({ min: 6, max: 20 }) },
